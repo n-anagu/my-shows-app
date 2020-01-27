@@ -1,1 +1,56 @@
 @import '../../../assets/styles/variables';
+
+.show {
+  background: whitesmoke;
+  border-radius: 2rem;
+  margin: 0.5rem;
+
+  img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    border-radius: 2rem 2rem 2rem 2rem;
+    margin: 1rem;
+  }
+
+  img:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+  }
+
+  .show-body {
+    margin: 1rem 1rem 1rem 0;
+
+    h5 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .rate {
+      .average {
+        color: @teal;
+        font-weight: 600;
+        font-size: 1.25rem;
+      }
+    }
+
+    .summary {
+      margin-top: 1rem;
+    }
+
+    .favorite {
+      color: @purple;
+      border-color: @purple;
+    }
+
+    .favorite:not(:disabled):not(.disabled):active {
+      color: @purple;
+      border-color: @purple;
+    }
+
+    .favorite:hover {
+      color: @white;
+      border-color: @purple;
+      background: @purple;
+    }
+  }
+}
