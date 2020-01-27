@@ -1,1 +1,16 @@
-<p>shows-list works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div *ngIf="shows && shows.length > 0" class="shows-list">
+        <div *ngFor="let show of shows; let i = index" class="media">
+          <img src={{show.image.medium}} class="align-self-start mr-3" alt="...">
+          <div class="media-body">
+            <h5 class="mt-0">{{show.name}}</h5>
+            <p>{{show.rating.average}}</p>
+            <p [innerHTML]="show.summary"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

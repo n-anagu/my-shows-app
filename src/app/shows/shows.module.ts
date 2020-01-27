@@ -6,6 +6,8 @@ import { ShowsListComponent } from './shows-list/shows-list.component';
   declarations: [ShowsListComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [ShowsListComponent],
 })
+
 export class ShowsModule { }
