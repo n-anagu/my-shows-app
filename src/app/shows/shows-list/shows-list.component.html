@@ -6,14 +6,13 @@
           <img src={{show.image.medium}} class="align-self-start mr-3" alt="...">
           <div class="media-body show-body">
             <h5 class="mt-0">{{ show.name }}</h5>
-            <div class="rate">Rate: <span class="average">{{ show.rating.average }}</span></div>
-            <p [innerHTML]="show.summary" class="summary"></p>
-            <div>
-              <a href="https://www.imdb.com/title/{{show.externals.imdb}}" class="btn external-button">Show in IMDB</a>
+            <div class="rate">
+              Rate: <span class="average">{{ show.rating.average }}</span>
             </div>
-            <button class="btn btn-outline favorite-button">
-              <fa-icon [icon]="faStar"></fa-icon>
-            </button>
+            <p [innerHTML]="show.summary | truncateText: 100" class="summary"></p>
+            <div>
+              <a href="https://www.imdb.com/title/{{show.externals.imdb}}" class="btn external-button" target="_blank">Show in IMDB</a>
+            </div>
           </div>
         </div>
       </div>
