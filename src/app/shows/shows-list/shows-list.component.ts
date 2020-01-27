@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Show } from '../models/show';
 import { ShowsService } from '../shows.service';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-shows-list',
@@ -11,6 +12,7 @@ import { ShowsService } from '../shows.service';
 
 export class ShowsListComponent implements OnInit {
   shows: Array<Show>;
+  faStar = faStar;
 
   constructor(private showsService: ShowsService) { }
 
