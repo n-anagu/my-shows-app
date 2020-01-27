@@ -1,3 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'assets/styles/base';
 @import 'assets/styles/tables';
+
+@font-face {
+  font-family: Franca Bold;
+  src: url(/assets/fonts/Rene-Bieder-Franca-DEMO-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: Franca;
+  src: url(/assets/fonts/Rene-Bieder-Franca-DEMO-Book.otf) format('opentype');
+}
+
+body {
+  font-family: 'Franca', Fallback, sans-serif !important;
+}
